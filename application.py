@@ -33,6 +33,6 @@ def predict():
     return render_template("index.html", results=result[0])
 
 
-# 🔴 THIS IS WHY YOUR SERVER WAS NOT RUNNING
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
