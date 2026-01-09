@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.result-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h1 { color: #4e54c8; }
+h2 { color: #333; margin: 20px 0; }
+a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+a:hover {
+    background: linear-gradient(to left, #4e54c8, #8f94fb);
+}
+</style>
+</head>
+<body>
+    <div class="result-card">
+        <h1>Student Exam Performance Result</h1>
+        <h2>The prediction is: {{ results }}</h2>
+        <a href="{{ url_for('home') }}">Go back</a>
+    </div>
+</body>
+</html>
